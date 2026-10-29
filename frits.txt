@@ -1,0 +1,176 @@
+Here’s a complete solution for your Git branching assignment, covering all the tasks and grading criteria: creating a feature branch, making changes, committing them, merging into `main`, and explaining merge conflicts.
+
+## 1. What is a Git branch?
+
+A Git branch is a separate line of development in a repository. It lets developers work on a new feature or bug fix without directly changing the `main` branch.
+
+Why use branches?
+
+- Work on features independently.
+- Keep the main code stable.
+- Collaborate with other developers.
+- Review and test changes before merging them.
+
+Main branch vs. feature branch
+
+| Main branch                               | Feature branch                                 |
+| ----------------------------------------- | ---------------------------------------------- |
+| Contains the primary, stable codebase.    | Contains work for a specific feature or fix.   |
+| Should remain stable.                     | Can change frequently during development.      |
+| Receives approved changes through merges. | Is typically merged into `main` when complete. |
+
+## 2. Create a feature branch
+
+Open a terminal in your Git repository and run:
+
+```
+# Check the current branch
+git branch
+
+# Switch to main and get the latest changes
+git switch main
+git pull origin main
+
+# Create and switch to a feature branch
+git switch -c feature/git-branch-demo
+```
+
+This creates a new branch named `feature/git-branch-demo` without changing the existing `main` branch.
+
+## 3. Make changes and commit them
+
+Create a file named `git-branch-demo.txt` in your project and add the following content:
+
+```
+Git Branching Assignment
+
+A Git branch allows developers to work independently
+without affecting the main codebase.
+
+Feature branches help isolate new features and bug fixes.
+After testing, feature branches can be merged into main.
+```
+
+Save the file, then run:
+
+```
+# Check changed files
+git status
+
+# Stage the new file
+git add git-branch-demo.txt
+
+# Commit with a meaningful message
+git commit -m "Add Git branching assignment documentation"
+```
+
+A meaningful commit message briefly explains what changed.
+
+Examples:
+
+- `Add Git branching assignment documentation`
+- `Fix login form validation`
+- `Update course pricing logic`
+
+## 4. Push the feature branch and merge it into main
+
+Push the feature branch to GitHub:
+
+```
+git push -u origin feature/git-branch-demo
+```
+
+Now switch back to `main` and merge the feature branch:
+
+```
+git switch main
+git merge feature/git-branch-demo
+```
+
+If Git reports that the merge completed successfully, your feature is now included in the local `main` branch.
+
+Push the merged changes to GitHub:
+
+```
+git push origin main
+```
+
+If your repository uses pull requests or branch protection, open a pull request on GitHub and merge it according to the repository's rules instead of pushing directly to `main`.
+
+## 5. Understand and resolve merge conflicts
+
+A merge conflict happens when Git cannot automatically combine changes, usually because two branches modified the same part of a file differently.
+
+For example, `main` contains:
+
+```
+Welcome to the application.
+```
+
+Your feature branch changes the same line to:
+
+```
+Welcome to the new application.
+```
+
+If `main` independently changes that line to:
+
+```
+Welcome to our platform.
+```
+
+Git may produce conflict markers like these:
+
+```
+<<<<<<< HEAD
+Welcome to our platform.
+=======
+Welcome to the new application.
+>>>>>>> feature/git-branch-demo
+```
+
+To resolve the conflict:
+
+1. Open the conflicted file.
+2. Decide which changes to keep, or combine both versions.
+3. Remove the conflict markers.
+4. Save the file and stage the resolution.
+5. Commit the resolved changes.
+
+```
+git add git-branch-demo.txt
+git commit -m "Resolve merge conflict in branch demo"
+```
+
+The final file might contain:
+
+```
+Welcome to our new application platform.
+```
+
+The exact wording depends on the changes you intend to keep. If the merge is still in progress, do not run a new commit until you have resolved all conflicts and staged the files.
+
+## 6. Verify your work
+
+Run these commands to check your branch and commit history:
+
+```
+# Confirm the current branch
+git branch
+
+# Review recent commits
+git log --oneline --graph --all
+
+# Check for uncommitted changes
+git status
+```
+
+Your completed assignment should demonstrate:
+
+- &#x20;An explanation of Git branches and their purpose.
+- &#x20;A feature branch created and used.
+- &#x20;Changes committed with meaningful messages.
+- &#x20;The feature branch merged into `main`.
+- &#x20;An explanation of how merge conflicts are resolved.
+
+Important: These instructions provide the solution, but you still need to execute the commands in your own repository and push your work to GitHub for the assignment to be verified.
