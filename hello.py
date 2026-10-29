@@ -1,30 +1,36 @@
-You need to complete this Basic Python Programming Assignment. Follow these steps to write, run, and submit your Python program.
+The review failed because your GitHub repository contains instructions instead of an actual runnable Python program. The good news is that the reviewer has already identified exactly what needs to be fixed.
 
-## Step 1: Create a Python file
+To resolve the review, you must add `main.py` to your existing GitHub repository and push the changes to the same branch.
 
-Create a file named `main.py` and add this code:
+## 1. Create the correct `main.py` file
+
+Your `main.py` must contain only executable Python code, with each `print()` statement on its own line.
 
 ```
 print("Hello, World!")print("Welcome to Python programming.")print("I am learning Python.")print("Python syntax is easy to understand.")print("This is my first Python assignment.")
 ```
 
-## Step 2: Run the program
+## 2. Update your existing GitHub repository
 
-Open your terminal in the folder containing `main.py` and execute:
+Open your [assignment repository](https://github.com/exelynt-learning-application/python-course-assignment-920391-anjali?utm_source=chatgpt.com).
+
+Make sure you work on this branch:
+
+`introduction-to-python-applications-week2-276`
+
+The simplest approach is to open the repository on GitHub, select the correct branch, click Add file → Create new file, name the file `main.py`, paste the code above, and commit the new file to that same branch.
+
+Keep `README.md` for the assignment instructions. If `hello.py` contains only instructions rather than Python code, remove it or replace its contents appropriately.
+
+## 3. Verify the program
+
+If you use a local terminal, run:
 
 ```
 python main.py
 ```
 
-If your system uses Python 3 explicitly, run:
-
-```
-python3 main.py
-```
-
-## Step 3: Check the expected output
-
-Your program should display:
+Expected output:
 
 ```
 Hello, World!
@@ -34,24 +40,13 @@ Python syntax is easy to understand.
 This is my first Python assignment.
 ```
 
-## Step 4: Submit your assignment to GitHub
+## 4. Submit and check the review
 
-Since GitHub is connected to your assignment, push your code to the repository the platform has connected.
+After committing `main.py`, return to your assignment platform and trigger a new review or submission if required.
 
-```
-git add main.py
-git commit -m "Add basic Python print statements"
-git push
-```
+Your final repository should include:
 
-If you are working in the platform's built-in coding environment, create or edit `main.py` there and use its available save or submit workflow instead.
+- `main.py` — the actual Python program.
+- `README.md` — assignment instructions and documentation.
 
-## Final checklist
-
-- Python syntax is correct.
-- Multiple messages are printed.
-- Indentation is correct.
-- The program runs without errors.
-- Your changes are pushed to the connected GitHub repository.
-
-Important: Use the exact output requested by your assignment if additional instructions specify particular messages.
+The reviewer should now be able to find the required Python file, check the syntax, and execute the program. I can't guarantee a passing score until the platform runs its review again, but this directly addresses the reported blockers.
