@@ -1,0 +1,155 @@
+You need to complete a Git and GitHub collaborative development assignment. Based on the screenshot, the reviewer checks whether you created local and remote repositories, maintained a proper folder structure, wrote meaningful commit messages, and completed the required number of commits.
+
+Follow these steps to complete the assignment.
+
+## Step 1: Create a project folder
+
+Open Terminal (Mac/Linux) or Git Bash (Windows) and run:
+
+```
+mkdir git-collaboration-assignment
+cd git-collaboration-assignment
+
+git init
+mkdir src docs
+```
+
+Create a README file:
+
+```
+echo "# Git Collaboration Assignment" > README.md
+echo "Learning Git and GitHub collaboration." > src/app.txt
+echo "Project documentation" > docs/notes.md
+```
+
+## Step 2: Make your first commit
+
+```
+git add .
+git commit -m "Initial commit: create project structure"
+```
+
+If Git asks you to configure your identity, run these commands with your own details:
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+Then repeat the commit command.
+
+## Step 3: Create a GitHub repository
+
+1. Open [GitHub](https://github.com/?utm_source=chatgpt.com) and sign in.
+2. Click the + icon and select New repository.
+3. Enter the repository name: `git-collaboration-assignment`.
+4. Choose Public or Private, depending on your assignment requirements.
+5. Leave “Add a README” unchecked because you already created one locally.
+6. Click Create repository.
+
+Connect your local project to GitHub. Replace `YOUR_USERNAME` with your GitHub username.
+
+```
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/git-collaboration-assignment.git
+git push -u origin main
+```
+
+## Step 4: Make more commits
+
+Add some project documentation:
+
+```
+echo "This project demonstrates Git basics." >> README.md
+git add README.md
+git commit -m "Update README with project overview"
+git push
+```
+
+Add another file:
+
+```
+echo "Git tracks changes in files." > src/git-basics.txt
+git add src/git-basics.txt
+git commit -m "Add Git basics learning notes"
+git push
+```
+
+Update the documentation:
+
+```
+echo "Use branches to develop features safely." >> docs/notes.md
+git add docs/notes.md
+git commit -m "Document branch-based development"
+git push
+```
+
+You now have multiple meaningful commits rather than a single initial commit.
+
+## Step 5: Create a branch and merge changes
+
+Create a feature branch:
+
+```
+git checkout -b feature/add-project-info
+```
+
+Add a new feature file:
+
+```
+echo "Feature: project information" > src/project-info.txt
+git add src/project-info.txt
+git commit -m "Add project information feature"
+git push -u origin feature/add-project-info
+```
+
+Merge the feature into the main branch:
+
+```
+git checkout main
+git merge feature/add-project-info
+git push origin main
+```
+
+This demonstrates branch creation, committing changes on a branch, merging, and pushing to GitHub.
+
+## Step 6: Verify your assignment
+
+Run these commands:
+
+```
+git status
+git remote -v
+git branch -a
+git log --oneline
+```
+
+Your project structure should look like this:
+
+git-collaboration-assignment/
+
+README.md
+
+src/
+
+app.txt
+
+git-basics.txt
+
+project-info.txt
+
+docs/
+
+notes.md
+
+## Final checklist
+
+- Local Git repository created.
+- GitHub remote repository created and connected.
+- Project folder structure created.
+- Multiple meaningful commits completed.
+- Feature branch created and pushed.
+- Feature branch merged into `main`.
+- All changes pushed to GitHub.
+
+Important: Your screenshot does not specify the exact minimum commit count. The steps above create five commits, which should demonstrate the required workflow, but check the assignment instructions for the exact minimum. Also, because your reviewer checks every push, ensure your GitHub repository is connected to the correct assignment.
