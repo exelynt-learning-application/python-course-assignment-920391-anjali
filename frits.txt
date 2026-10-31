@@ -6,8 +6,7 @@ A Git branch is a separate line of development in a repository. It lets develope
 
 Why use branches?
 
-- Work on features independently.
-- Keep the main code stable.
+
 - Collaborate with other developers.
 - Review and test changes before merging them.
 
