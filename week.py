@@ -1,5 +1,5 @@
 
-num = int(input("Enter a number: "))
+num = int(input("Enter a number "))
 
 print("\nMultiplication Table of", num)
 print("-------------------------")
